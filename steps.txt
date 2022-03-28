@@ -1,0 +1,9 @@
+Criar um projeto em state machine para movimentações bancárias
+
+Criar uma planilha base com nome, cpf, extrato, conta e senha para algumas pessoas
+
+Permitir que a pessoa faça algumas operações pré definidas como:
+Checar extrato
+Fazer transferencia
+Pagar conta (criar algumas sequencias de numros para simular boletos e valores) (e verificar se essa conta ja foi paga?)
+Fazer depósito
