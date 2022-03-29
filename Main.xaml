@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="Main" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1849,819" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:av="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="Main" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1822,819" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:av="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="32">
       <x:String>System.Activities</x:String>
@@ -36,7 +36,7 @@
     </scg:List>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
-    <scg:List x:TypeArguments="AssemblyReference" Capacity="26">
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="25">
       <AssemblyReference>System.Activities</AssemblyReference>
       <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
       <AssemblyReference>mscorlib</AssemblyReference>
@@ -62,7 +62,6 @@
       <AssemblyReference>System.ValueTuple</AssemblyReference>
       <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
       <AssemblyReference>System.Memory</AssemblyReference>
-      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
   <Sequence sap:VirtualizedContainerService.HintSize="242,143" sap2010:WorkflowViewState.IdRef="Sequence_1">
@@ -83,14 +82,14 @@
       </sap:WorkflowViewStateService.ViewState>
       <State x:Name="__ReferenceID0" sap2010:Annotation.AnnotationText="Validar usuario e verificar operacao" DisplayName="Init" sap:VirtualizedContainerService.HintSize="134,118" sap2010:WorkflowViewState.IdRef="State_1">
         <State.Entry>
-          <Sequence sap:VirtualizedContainerService.HintSize="809,1901" sap2010:WorkflowViewState.IdRef="Sequence_2">
+          <Sequence sap:VirtualizedContainerService.HintSize="959,2014" sap2010:WorkflowViewState.IdRef="Sequence_2">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">False</x:Boolean>
                 <x:Boolean x:Key="IsPinned">False</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <If Condition="[primeira_execucao]" DisplayName="If LerBase" sap:VirtualizedContainerService.HintSize="767,51" sap2010:WorkflowViewState.IdRef="If_1">
+            <If Condition="[primeira_execucao]" DisplayName="If LerBase" sap:VirtualizedContainerService.HintSize="917,51" sap2010:WorkflowViewState.IdRef="If_1">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -153,10 +152,10 @@
                 </Sequence>
               </If.Else>
             </If>
-            <Sequence DisplayName="Verificar conta" sap:VirtualizedContainerService.HintSize="767,701" sap2010:WorkflowViewState.IdRef="Sequence_14">
+            <Sequence DisplayName="Verificar conta" sap:VirtualizedContainerService.HintSize="917,66" sap2010:WorkflowViewState.IdRef="Sequence_14">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
                   <x:Boolean x:Key="IsPinned">False</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
@@ -171,19 +170,34 @@
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
               </ui:InputDialog>
-              <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="438,518" sap2010:WorkflowViewState.IdRef="TryCatch_2">
+              <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="438,710" sap2010:WorkflowViewState.IdRef="TryCatch_2">
                 <TryCatch.Try>
-                  <ui:LookupDataTable LookupColumnIndex="{x:Null}" LookupDataColumn="{x:Null}" RowIndex="{x:Null}" TargetColumnIndex="{x:Null}" TargetDataColumn="{x:Null}" DataTable="[dt_Base]" DisplayName="Lookup Data Table" sap:VirtualizedContainerService.HintSize="334,291" sap2010:WorkflowViewState.IdRef="LookupDataTable_1" LookupColumnName="conta" LookupValue="[inputed_conta]" TargetColumnName="id">
-                    <ui:LookupDataTable.CellValue>
-                      <OutArgument x:TypeArguments="x:Double">[retorno_conta]</OutArgument>
-                    </ui:LookupDataTable.CellValue>
+                  <Sequence sap:VirtualizedContainerService.HintSize="376,483" sap2010:WorkflowViewState.IdRef="Sequence_56">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
-                  </ui:LookupDataTable>
+                    <ui:LookupDataTable LookupColumnIndex="{x:Null}" LookupDataColumn="{x:Null}" RowIndex="{x:Null}" TargetColumnIndex="{x:Null}" TargetDataColumn="{x:Null}" DataTable="[dt_Base]" DisplayName="Lookup Data Table" sap:VirtualizedContainerService.HintSize="334,291" sap2010:WorkflowViewState.IdRef="LookupDataTable_1" LookupColumnName="conta" LookupValue="[inputed_conta]" TargetColumnName="id">
+                      <ui:LookupDataTable.CellValue>
+                        <OutArgument x:TypeArguments="x:Double">[retorno_conta]</OutArgument>
+                      </ui:LookupDataTable.CellValue>
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                    </ui:LookupDataTable>
+                    <Assign sap:VirtualizedContainerService.HintSize="334,60" sap2010:WorkflowViewState.IdRef="Assign_34">
+                      <Assign.To>
+                        <OutArgument x:TypeArguments="x:Boolean">[pedir_senha]</OutArgument>
+                      </Assign.To>
+                      <Assign.Value>
+                        <InArgument x:TypeArguments="x:Boolean">True</InArgument>
+                      </Assign.Value>
+                    </Assign>
+                  </Sequence>
                 </TryCatch.Try>
                 <TryCatch.Catches>
                   <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="404,21" sap2010:WorkflowViewState.IdRef="Catch`1_2">
@@ -197,12 +211,20 @@
                       <ActivityAction.Argument>
                         <DelegateInArgument x:TypeArguments="s:Exception" Name="exception" />
                       </ActivityAction.Argument>
-                      <Sequence sap:VirtualizedContainerService.HintSize="376,176" sap2010:WorkflowViewState.IdRef="Sequence_26">
+                      <Sequence sap:VirtualizedContainerService.HintSize="376,276" sap2010:WorkflowViewState.IdRef="Sequence_26">
                         <sap:WorkflowViewStateService.ViewState>
                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                           </scg:Dictionary>
                         </sap:WorkflowViewStateService.ViewState>
+                        <Assign sap:VirtualizedContainerService.HintSize="334,60" sap2010:WorkflowViewState.IdRef="Assign_35">
+                          <Assign.To>
+                            <OutArgument x:TypeArguments="x:Boolean">[pedir_senha]</OutArgument>
+                          </Assign.To>
+                          <Assign.Value>
+                            <InArgument x:TypeArguments="x:Boolean">False</InArgument>
+                          </Assign.Value>
+                        </Assign>
                         <ui:MessageBox Caption="{x:Null}" AutoCloseAfter="00:00:00" Buttons="YesNo" ChosenButton="[tentar_novamente]" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="334,84" sap2010:WorkflowViewState.IdRef="MessageBox_1" Text="[&quot;Conta não encontrada, tentar de novo?&quot;]" TopMost="True" />
                       </Sequence>
                     </ActivityAction>
@@ -210,94 +232,43 @@
                 </TryCatch.Catches>
               </TryCatch>
             </Sequence>
-            <Sequence DisplayName="Verificar senha" sap:VirtualizedContainerService.HintSize="767,977" sap2010:WorkflowViewState.IdRef="Sequence_16">
+            <If Condition="[pedir_senha]" DisplayName="If Após verificar conta com sucesso" sap:VirtualizedContainerService.HintSize="917,1725" sap2010:WorkflowViewState.IdRef="If_16">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                   <x:Boolean x:Key="IsPinned">False</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
-              <ui:InputDialog Options="{x:Null}" OptionsString="{x:Null}" DisplayName="Input Dialog" sap:VirtualizedContainerService.HintSize="725,238" sap2010:WorkflowViewState.IdRef="InputDialog_2" IsPassword="True" Label="Digite sua senha: " Title="Verificacão de usuário">
-                <ui:InputDialog.Result>
-                  <OutArgument x:TypeArguments="x:String">[conta_senha]</OutArgument>
-                </ui:InputDialog.Result>
-                <sap:WorkflowViewStateService.ViewState>
-                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                  </scg:Dictionary>
-                </sap:WorkflowViewStateService.ViewState>
-              </ui:InputDialog>
-              <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="725,51" sap2010:WorkflowViewState.IdRef="TryCatch_3">
-                <sap:WorkflowViewStateService.ViewState>
-                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                    <x:Boolean x:Key="IsExpanded">False</x:Boolean>
-                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                  </scg:Dictionary>
-                </sap:WorkflowViewStateService.ViewState>
-                <TryCatch.Try>
-                  <ui:LookupDataTable LookupColumnIndex="{x:Null}" LookupDataColumn="{x:Null}" RowIndex="{x:Null}" TargetColumnIndex="{x:Null}" TargetDataColumn="{x:Null}" DataTable="[dt_Base]" DisplayName="Lookup Data Table" sap:VirtualizedContainerService.HintSize="334,291" sap2010:WorkflowViewState.IdRef="LookupDataTable_2" LookupColumnName="conta" LookupValue="[inputed_conta]" TargetColumnName="senha">
-                    <ui:LookupDataTable.CellValue>
-                      <OutArgument x:TypeArguments="x:Double">[retorno_conta]</OutArgument>
-                    </ui:LookupDataTable.CellValue>
+              <If.Then>
+                <Sequence DisplayName="Verificar senha" sap:VirtualizedContainerService.HintSize="881,1538" sap2010:WorkflowViewState.IdRef="Sequence_16">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <ui:InputDialog Options="{x:Null}" OptionsString="{x:Null}" DisplayName="Input Dialog" sap:VirtualizedContainerService.HintSize="839,51" sap2010:WorkflowViewState.IdRef="InputDialog_2" IsPassword="True" Label="Digite sua senha: " Title="Verificacão de usuário">
+                    <ui:InputDialog.Result>
+                      <OutArgument x:TypeArguments="x:String">[conta_senha]</OutArgument>
+                    </ui:InputDialog.Result>
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
                         <x:Boolean x:Key="IsPinned">False</x:Boolean>
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
-                  </ui:LookupDataTable>
-                </TryCatch.Try>
-                <TryCatch.Catches>
-                  <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="400,104" sap2010:WorkflowViewState.IdRef="Catch`1_3">
+                  </ui:InputDialog>
+                  <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="839,51" sap2010:WorkflowViewState.IdRef="TryCatch_3">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
                         <x:Boolean x:Key="IsPinned">False</x:Boolean>
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
-                    <ActivityAction x:TypeArguments="s:Exception">
-                      <ActivityAction.Argument>
-                        <DelegateInArgument x:TypeArguments="s:Exception" Name="exception" />
-                      </ActivityAction.Argument>
-                    </ActivityAction>
-                  </Catch>
-                </TryCatch.Catches>
-              </TryCatch>
-              <If Condition="[NOT retorno_conta.ToString = conta_senha.ToString]" sap:VirtualizedContainerService.HintSize="725,516" sap2010:WorkflowViewState.IdRef="If_6">
-                <sap:WorkflowViewStateService.ViewState>
-                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                  </scg:Dictionary>
-                </sap:WorkflowViewStateService.ViewState>
-                <If.Then>
-                  <Sequence sap:VirtualizedContainerService.HintSize="376,176" sap2010:WorkflowViewState.IdRef="Sequence_17">
-                    <sap:WorkflowViewStateService.ViewState>
-                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                      </scg:Dictionary>
-                    </sap:WorkflowViewStateService.ViewState>
-                    <ui:MessageBox Caption="{x:Null}" AutoCloseAfter="00:00:00" Buttons="YesNo" ChosenButton="[tentar_novamente]" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="334,84" sap2010:WorkflowViewState.IdRef="MessageBox_3" Text="[&quot;Senha errada, tentar de novo?&quot;]" TopMost="True" />
-                  </Sequence>
-                </If.Then>
-                <If.Else>
-                  <Sequence sap:VirtualizedContainerService.HintSize="304,358" sap2010:WorkflowViewState.IdRef="Sequence_18">
-                    <sap:WorkflowViewStateService.ViewState>
-                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                      </scg:Dictionary>
-                    </sap:WorkflowViewStateService.ViewState>
-                    <Sequence DisplayName="Pegar infos" sap:VirtualizedContainerService.HintSize="262,66" sap2010:WorkflowViewState.IdRef="Sequence_24">
-                      <sap:WorkflowViewStateService.ViewState>
-                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
-                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                        </scg:Dictionary>
-                      </sap:WorkflowViewStateService.ViewState>
-                      <ui:LookupDataTable LookupColumnIndex="{x:Null}" LookupDataColumn="{x:Null}" RowIndex="{x:Null}" TargetColumnIndex="{x:Null}" TargetDataColumn="{x:Null}" DataTable="[dt_Base]" DisplayName="Lookup Data Table" sap:VirtualizedContainerService.HintSize="334,291" sap2010:WorkflowViewState.IdRef="LookupDataTable_3" LookupColumnName="conta" LookupValue="[inputed_conta]" TargetColumnName="nome">
+                    <TryCatch.Try>
+                      <ui:LookupDataTable LookupColumnIndex="{x:Null}" LookupDataColumn="{x:Null}" RowIndex="{x:Null}" TargetColumnIndex="{x:Null}" TargetDataColumn="{x:Null}" DataTable="[dt_Base]" DisplayName="Lookup Data Table" sap:VirtualizedContainerService.HintSize="334,291" sap2010:WorkflowViewState.IdRef="LookupDataTable_2" LookupColumnName="conta" LookupValue="[inputed_conta]" TargetColumnName="senha">
                         <ui:LookupDataTable.CellValue>
-                          <OutArgument x:TypeArguments="x:String">[client_nome]</OutArgument>
+                          <OutArgument x:TypeArguments="x:Double">[retorno_conta]</OutArgument>
                         </ui:LookupDataTable.CellValue>
                         <sap:WorkflowViewStateService.ViewState>
                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -306,46 +277,116 @@
                           </scg:Dictionary>
                         </sap:WorkflowViewStateService.ViewState>
                       </ui:LookupDataTable>
-                      <ui:LookupDataTable LookupColumnIndex="{x:Null}" LookupDataColumn="{x:Null}" TargetColumnIndex="{x:Null}" TargetDataColumn="{x:Null}" DataTable="[dt_Base]" DisplayName="Lookup Data Table" sap:VirtualizedContainerService.HintSize="334,291" sap2010:WorkflowViewState.IdRef="LookupDataTable_4" LookupColumnName="conta" LookupValue="[inputed_conta]" RowIndex="[client_index]" TargetColumnName="extrato">
-                        <ui:LookupDataTable.CellValue>
-                          <OutArgument x:TypeArguments="x:Double">[client_extrato]</OutArgument>
-                        </ui:LookupDataTable.CellValue>
+                    </TryCatch.Try>
+                    <TryCatch.Catches>
+                      <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="404,21" sap2010:WorkflowViewState.IdRef="Catch`1_3">
                         <sap:WorkflowViewStateService.ViewState>
                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
                             <x:Boolean x:Key="IsPinned">False</x:Boolean>
                           </scg:Dictionary>
                         </sap:WorkflowViewStateService.ViewState>
-                      </ui:LookupDataTable>
-                      <Assign DisplayName="ReAssign Client Index" sap:VirtualizedContainerService.HintSize="334,60" sap2010:WorkflowViewState.IdRef="Assign_6">
-                        <Assign.To>
-                          <OutArgument x:TypeArguments="x:Int32">[client_index]</OutArgument>
-                        </Assign.To>
-                        <Assign.Value>
-                          <InArgument x:TypeArguments="x:Int32">[client_index + 2]</InArgument>
-                        </Assign.Value>
-                      </Assign>
-                    </Sequence>
-                    <Assign sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_12">
-                      <Assign.To>
-                        <OutArgument x:TypeArguments="x:String">[tentar_novamente]</OutArgument>
-                      </Assign.To>
-                      <Assign.Value>
-                        <InArgument x:TypeArguments="x:String">NADA</InArgument>
-                      </Assign.Value>
-                    </Assign>
-                    <Assign sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_11">
-                      <Assign.To>
-                        <OutArgument x:TypeArguments="x:Boolean">[dados_coerentes]</OutArgument>
-                      </Assign.To>
-                      <Assign.Value>
-                        <InArgument x:TypeArguments="x:Boolean">True</InArgument>
-                      </Assign.Value>
-                    </Assign>
-                  </Sequence>
-                </If.Else>
-              </If>
-            </Sequence>
+                        <ActivityAction x:TypeArguments="s:Exception">
+                          <ActivityAction.Argument>
+                            <DelegateInArgument x:TypeArguments="s:Exception" Name="exception" />
+                          </ActivityAction.Argument>
+                        </ActivityAction>
+                      </Catch>
+                    </TryCatch.Catches>
+                  </TryCatch>
+                  <If Condition="[NOT retorno_conta.ToString = conta_senha.ToString]" sap:VirtualizedContainerService.HintSize="839,1264" sap2010:WorkflowViewState.IdRef="If_6">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <If.Then>
+                      <Sequence sap:VirtualizedContainerService.HintSize="376,176" sap2010:WorkflowViewState.IdRef="Sequence_17">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                        <ui:MessageBox Caption="{x:Null}" AutoCloseAfter="00:00:00" Buttons="YesNo" ChosenButton="[tentar_novamente]" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="334,84" sap2010:WorkflowViewState.IdRef="MessageBox_3" Text="[&quot;Senha errada, tentar de novo?&quot;]" TopMost="True" />
+                      </Sequence>
+                    </If.Then>
+                    <If.Else>
+                      <Sequence sap:VirtualizedContainerService.HintSize="418,1106" sap2010:WorkflowViewState.IdRef="Sequence_18">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                        <Sequence DisplayName="Pegar infos" sap:VirtualizedContainerService.HintSize="376,814" sap2010:WorkflowViewState.IdRef="Sequence_24">
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                          <ui:LookupDataTable LookupColumnIndex="{x:Null}" LookupDataColumn="{x:Null}" RowIndex="{x:Null}" TargetColumnIndex="{x:Null}" TargetDataColumn="{x:Null}" DataTable="[dt_Base]" DisplayName="Lookup Data Table" sap:VirtualizedContainerService.HintSize="334,291" sap2010:WorkflowViewState.IdRef="LookupDataTable_3" LookupColumnName="conta" LookupValue="[inputed_conta]" TargetColumnName="nome">
+                            <ui:LookupDataTable.CellValue>
+                              <OutArgument x:TypeArguments="x:String">[client_nome]</OutArgument>
+                            </ui:LookupDataTable.CellValue>
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                          </ui:LookupDataTable>
+                          <ui:LookupDataTable LookupColumnIndex="{x:Null}" LookupDataColumn="{x:Null}" TargetColumnIndex="{x:Null}" TargetDataColumn="{x:Null}" DataTable="[dt_Base]" DisplayName="Lookup Data Table" sap:VirtualizedContainerService.HintSize="334,291" sap2010:WorkflowViewState.IdRef="LookupDataTable_4" LookupColumnName="conta" LookupValue="[inputed_conta]" RowIndex="[client_index]" TargetColumnName="extrato">
+                            <ui:LookupDataTable.CellValue>
+                              <OutArgument x:TypeArguments="x:Double">[client_extrato]</OutArgument>
+                            </ui:LookupDataTable.CellValue>
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                          </ui:LookupDataTable>
+                          <Assign DisplayName="ReAssign Client Index" sap:VirtualizedContainerService.HintSize="334,60" sap2010:WorkflowViewState.IdRef="Assign_6">
+                            <Assign.To>
+                              <OutArgument x:TypeArguments="x:Int32">[client_index]</OutArgument>
+                            </Assign.To>
+                            <Assign.Value>
+                              <InArgument x:TypeArguments="x:Int32">[client_index + 2]</InArgument>
+                            </Assign.Value>
+                          </Assign>
+                        </Sequence>
+                        <Assign sap:VirtualizedContainerService.HintSize="376,60" sap2010:WorkflowViewState.IdRef="Assign_12">
+                          <Assign.To>
+                            <OutArgument x:TypeArguments="x:String">[tentar_novamente]</OutArgument>
+                          </Assign.To>
+                          <Assign.Value>
+                            <InArgument x:TypeArguments="x:String">NADA</InArgument>
+                          </Assign.Value>
+                        </Assign>
+                        <Assign sap:VirtualizedContainerService.HintSize="376,60" sap2010:WorkflowViewState.IdRef="Assign_11">
+                          <Assign.To>
+                            <OutArgument x:TypeArguments="x:Boolean">[dados_coerentes]</OutArgument>
+                          </Assign.To>
+                          <Assign.Value>
+                            <InArgument x:TypeArguments="x:Boolean">True</InArgument>
+                          </Assign.Value>
+                        </Assign>
+                      </Sequence>
+                    </If.Else>
+                  </If>
+                </Sequence>
+              </If.Then>
+              <If.Else>
+                <Sequence sap2010:WorkflowViewState.IdRef="Sequence_57">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                </Sequence>
+              </If.Else>
+            </If>
           </Sequence>
         </State.Entry>
         <sap:WorkflowViewStateService.ViewState>
@@ -378,9 +419,7 @@
                 <x:Int32 x:Key="DestConnectionPointIndex">34</x:Int32>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <Transition.Condition>
-              <mva:VisualBasicValue x:TypeArguments="x:Boolean" ExpressionText="dados_coerentes" />
-            </Transition.Condition>
+            <Transition.Condition>[dados_coerentes]</Transition.Condition>
             <Transition.To>
               <State x:Name="__ReferenceID2" DisplayName="Procedimento" sap:VirtualizedContainerService.HintSize="134,61" sap2010:WorkflowViewState.IdRef="State_7">
                 <State.Entry>
@@ -492,7 +531,7 @@
                                       </ActivityAction>
                                     </ui:ExcelApplicationScope.Body>
                                   </ui:ExcelApplicationScope>
-                                  <ui:MessageBox Caption="{x:Null}" AutoCloseAfter="00:00:00" Buttons="YesNo" ChosenButton="[novo_procedimento]" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="434,84" sap2010:WorkflowViewState.IdRef="MessageBox_7" Text="[&quot;Feito! Depósito feito com sucesso!&quot; + Environment.NewLine + &#xD;&#xA;&quot;Deseja fazer outra operação?&quot;]" TopMost="True" />
+                                  <ui:MessageBox Caption="{x:Null}" AutoCloseAfter="00:00:00" Buttons="YesNo" ChosenButton="[novo_procedimento]" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="434,84" sap2010:WorkflowViewState.IdRef="MessageBox_7" Text="[&quot;Feito! Depósito feito com sucesso!&quot; + Environment.NewLine + &#xA;&quot;Deseja fazer outra operação?&quot;]" TopMost="True" />
                                 </Sequence>
                               </If.Then>
                               <If.Else>
@@ -537,9 +576,7 @@
                                 <x:Int32 x:Key="DestConnectionPointIndex">45</x:Int32>
                               </scg:Dictionary>
                             </sap:WorkflowViewStateService.ViewState>
-                            <Transition.Condition>
-                              <mva:VisualBasicValue x:TypeArguments="x:Boolean" ExpressionText="novo_procedimento.ToString = &quot;No&quot;" />
-                            </Transition.Condition>
+                            <Transition.Condition>[novo_procedimento.ToString = "No"]</Transition.Condition>
                             <Transition.To>
                               <State x:Name="__ReferenceID3" DisplayName="Final State" sap:VirtualizedContainerService.HintSize="134,61" sap2010:WorkflowViewState.IdRef="State_2" IsFinal="True">
                                 <sap:WorkflowViewStateService.ViewState>
@@ -563,9 +600,7 @@
                             <Transition.To>
                               <x:Reference>__ReferenceID2</x:Reference>
                             </Transition.To>
-                            <Transition.Condition>
-                              <mva:VisualBasicValue x:TypeArguments="x:Boolean" ExpressionText="novo_procedimento = &quot;Yes&quot;" />
-                            </Transition.Condition>
+                            <Transition.Condition>[novo_procedimento = "Yes"]</Transition.Condition>
                           </Transition>
                         </State.Transitions>
                         <State.Variables>
@@ -582,9 +617,7 @@
                         <x:Int32 x:Key="DestConnectionPointIndex">30</x:Int32>
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
-                    <Transition.Condition>
-                      <mva:VisualBasicValue x:TypeArguments="x:Boolean" ExpressionText="tipo_operacao.ToString = &quot;Extrato&quot;" />
-                    </Transition.Condition>
+                    <Transition.Condition>[tipo_operacao.ToString = "Extrato"]</Transition.Condition>
                     <Transition.To>
                       <State x:Name="__ReferenceID5" DisplayName="Extrato" sap:VirtualizedContainerService.HintSize="134,61" sap2010:WorkflowViewState.IdRef="State_3">
                         <State.Entry>
@@ -605,7 +638,7 @@
                                 <InArgument x:TypeArguments="x:Double">[CDbl(client_extrato)]</InArgument>
                               </Assign.Value>
                             </Assign>
-                            <ui:MessageBox Caption="{x:Null}" AutoCloseAfter="00:00:00" Buttons="YesNo" ChosenButton="[novo_procedimento]" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="334,84" sap2010:WorkflowViewState.IdRef="MessageBox_8" Text="[&quot;Seu valor em conta é de: R$ &quot; + Math.Round(dbl_client_extrato,2).ToString + Environment.NewLine +&#xD;&#xA;&quot;Deseja fazer outra operação?&quot;]" TopMost="True" />
+                            <ui:MessageBox Caption="{x:Null}" AutoCloseAfter="00:00:00" Buttons="YesNo" ChosenButton="[novo_procedimento]" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="334,84" sap2010:WorkflowViewState.IdRef="MessageBox_8" Text="[&quot;Seu valor em conta é de: R$ &quot; + Math.Round(dbl_client_extrato,2).ToString + Environment.NewLine +&#xA;&quot;Deseja fazer outra operação?&quot;]" TopMost="True" />
                           </Sequence>
                         </State.Entry>
                         <sap:WorkflowViewStateService.ViewState>
@@ -627,9 +660,7 @@
                             <Transition.To>
                               <x:Reference>__ReferenceID2</x:Reference>
                             </Transition.To>
-                            <Transition.Condition>
-                              <mva:VisualBasicValue x:TypeArguments="x:Boolean" ExpressionText="novo_procedimento = &quot;Yes&quot;" />
-                            </Transition.Condition>
+                            <Transition.Condition>[novo_procedimento = "Yes"]</Transition.Condition>
                           </Transition>
                           <Transition DisplayName="Finalizar" sap:VirtualizedContainerService.HintSize="450,505" sap2010:WorkflowViewState.IdRef="Transition_11">
                             <sap:WorkflowViewStateService.ViewState>
@@ -642,9 +673,7 @@
                             <Transition.To>
                               <x:Reference>__ReferenceID3</x:Reference>
                             </Transition.To>
-                            <Transition.Condition>
-                              <mva:VisualBasicValue x:TypeArguments="x:Boolean" ExpressionText="novo_procedimento = &quot;No&quot;" />
-                            </Transition.Condition>
+                            <Transition.Condition>[novo_procedimento = "No"]</Transition.Condition>
                           </Transition>
                         </State.Transitions>
                       </State>
@@ -658,13 +687,11 @@
                         <x:Int32 x:Key="DestConnectionPointIndex">42</x:Int32>
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
-                    <Transition.Condition>
-                      <mva:VisualBasicValue x:TypeArguments="x:Boolean" ExpressionText="tipo_operacao.ToString = &quot;Pagar Conta&quot;" />
-                    </Transition.Condition>
+                    <Transition.Condition>[tipo_operacao.ToString = "Pagar Conta"]</Transition.Condition>
                     <Transition.To>
-                      <State x:Name="__ReferenceID6" DisplayName="Pagar" sap:VirtualizedContainerService.HintSize="134,61" sap2010:WorkflowViewState.IdRef="State_6">
+                      <State x:Name="__ReferenceID6" DisplayName="Pagar" sap:VirtualizedContainerService.HintSize="1314,1969" sap2010:WorkflowViewState.IdRef="State_6">
                         <State.Entry>
-                          <Sequence sap:VirtualizedContainerService.HintSize="939,1232" sap2010:WorkflowViewState.IdRef="Sequence_31">
+                          <Sequence sap:VirtualizedContainerService.HintSize="1268,1582" sap2010:WorkflowViewState.IdRef="Sequence_31">
                             <Sequence.Variables>
                               <Variable x:TypeArguments="x:String" Name="valor_conta" />
                             </Sequence.Variables>
@@ -673,12 +700,12 @@
                                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                               </scg:Dictionary>
                             </sap:WorkflowViewStateService.ViewState>
-                            <ui:InputDialog Options="{x:Null}" OptionsString="{x:Null}" DisplayName="Input Dialog" sap:VirtualizedContainerService.HintSize="897,238" sap2010:WorkflowViewState.IdRef="InputDialog_6" IsPassword="False" Label="Digite o valor da conta a ser paga (Ex: 100.10)" Title="Pagar Conta">
+                            <ui:InputDialog Options="{x:Null}" OptionsString="{x:Null}" DisplayName="Input Dialog" sap:VirtualizedContainerService.HintSize="1226,238" sap2010:WorkflowViewState.IdRef="InputDialog_6" IsPassword="False" Label="Digite o valor da conta a ser paga (Ex: 100.10)" Title="Pagar Conta">
                               <ui:InputDialog.Result>
                                 <OutArgument x:TypeArguments="x:String">[valor_conta]</OutArgument>
                               </ui:InputDialog.Result>
                             </ui:InputDialog>
-                            <If Condition="[double.TryParse(valor_conta.Replace(&quot;,&quot;,&quot;.&quot;),0)]" sap:VirtualizedContainerService.HintSize="897,862" sap2010:WorkflowViewState.IdRef="If_8">
+                            <If Condition="[double.TryParse(valor_conta.Replace(&quot;,&quot;,&quot;.&quot;),0)]" sap:VirtualizedContainerService.HintSize="1226,1212" sap2010:WorkflowViewState.IdRef="If_8">
                               <sap:WorkflowViewStateService.ViewState>
                                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -686,16 +713,17 @@
                                 </scg:Dictionary>
                               </sap:WorkflowViewStateService.ViewState>
                               <If.Then>
-                                <Sequence sap:VirtualizedContainerService.HintSize="476,704" sap2010:WorkflowViewState.IdRef="Sequence_29">
+                                <Sequence sap:VirtualizedContainerService.HintSize="939,1054" sap2010:WorkflowViewState.IdRef="Sequence_29">
                                   <Sequence.Variables>
                                     <Variable x:TypeArguments="x:Double" Name="dbl_valor_conta" />
+                                    <Variable x:TypeArguments="x:Double" Name="client_extrato_depois" />
                                   </Sequence.Variables>
                                   <sap:WorkflowViewStateService.ViewState>
                                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                     </scg:Dictionary>
                                   </sap:WorkflowViewStateService.ViewState>
-                                  <Assign sap:VirtualizedContainerService.HintSize="434,60" sap2010:WorkflowViewState.IdRef="Assign_13">
+                                  <Assign sap:VirtualizedContainerService.HintSize="897,60" sap2010:WorkflowViewState.IdRef="Assign_13">
                                     <Assign.To>
                                       <OutArgument x:TypeArguments="x:Double">[dbl_valor_conta]</OutArgument>
                                     </Assign.To>
@@ -703,42 +731,79 @@
                                       <InArgument x:TypeArguments="x:Double">[CDbl(valor_conta.Replace(",","."))]</InArgument>
                                     </Assign.Value>
                                   </Assign>
-                                  <Assign DisplayName="ReAssign Extrato" sap:VirtualizedContainerService.HintSize="434,60" sap2010:WorkflowViewState.IdRef="Assign_14">
+                                  <Assign DisplayName="ReAssign Extrato" sap:VirtualizedContainerService.HintSize="897,60" sap2010:WorkflowViewState.IdRef="Assign_14">
                                     <Assign.To>
-                                      <OutArgument x:TypeArguments="x:Double">[client_extrato]</OutArgument>
+                                      <OutArgument x:TypeArguments="x:Double">[client_extrato_depois]</OutArgument>
                                     </Assign.To>
                                     <Assign.Value>
                                       <InArgument x:TypeArguments="x:Double">[client_extrato - dbl_valor_conta]</InArgument>
                                     </Assign.Value>
                                   </Assign>
-                                  <ui:ExcelApplicationScope Password="{x:Null}" DisplayName="Excel Application Scope" sap:VirtualizedContainerService.HintSize="434,288" sap2010:WorkflowViewState.IdRef="ExcelApplicationScope_3" InstanceCachePeriod="3000" Visible="False" WorkbookPath="[Base]">
-                                    <ui:ExcelApplicationScope.Body>
-                                      <ActivityAction x:TypeArguments="ui:WorkbookApplication">
-                                        <ActivityAction.Argument>
-                                          <DelegateInArgument x:TypeArguments="ui:WorkbookApplication" Name="ExcelWorkbookScope" />
-                                        </ActivityAction.Argument>
-                                        <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="376,179" sap2010:WorkflowViewState.IdRef="Sequence_28">
-                                          <sap:WorkflowViewStateService.ViewState>
-                                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                            </scg:Dictionary>
-                                          </sap:WorkflowViewStateService.ViewState>
-                                          <ui:ExcelWriteCell Cell="[&quot;E&quot; + client_index.ToString]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="334,87" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_2" SheetName="Sheet1" Text="[client_extrato.ToString]" />
-                                        </Sequence>
-                                      </ActivityAction>
-                                    </ui:ExcelApplicationScope.Body>
-                                  </ui:ExcelApplicationScope>
-                                  <ui:MessageBox Caption="{x:Null}" AutoCloseAfter="00:00:00" Buttons="YesNo" ChosenButton="[novo_procedimento]" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="434,84" sap2010:WorkflowViewState.IdRef="MessageBox_10" Text="[&quot;Feito! Conta paga com sucesso!&quot; + Environment.NewLine + &#xD;&#xA;&quot;Deseja fazer outra operação?&quot;]" TopMost="True" />
+                                  <If Condition="[client_extrato_depois &lt; 0]" sap:VirtualizedContainerService.HintSize="897,762" sap2010:WorkflowViewState.IdRef="If_17">
+                                    <If.Then>
+                                      <Sequence sap:VirtualizedContainerService.HintSize="376,176" sap2010:WorkflowViewState.IdRef="Sequence_58">
+                                        <sap:WorkflowViewStateService.ViewState>
+                                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                          </scg:Dictionary>
+                                        </sap:WorkflowViewStateService.ViewState>
+                                        <ui:MessageBox Caption="{x:Null}" AutoCloseAfter="00:00:00" Buttons="YesNo" ChosenButton="[novo_procedimento]" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="334,84" sap2010:WorkflowViewState.IdRef="MessageBox_26" Text="[&quot;Saldo insuficiente!&quot; + Environment.NewLine + &#xD;&#xA;&quot;Deseja fazer outra operação?&quot;]" TopMost="True" />
+                                      </Sequence>
+                                    </If.Then>
+                                    <If.Else>
+                                      <Sequence sap:VirtualizedContainerService.HintSize="476,604" sap2010:WorkflowViewState.IdRef="Sequence_59">
+                                        <sap:WorkflowViewStateService.ViewState>
+                                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                          </scg:Dictionary>
+                                        </sap:WorkflowViewStateService.ViewState>
+                                        <ui:ExcelApplicationScope Password="{x:Null}" DisplayName="Excel Application Scope" sap:VirtualizedContainerService.HintSize="434,512" sap2010:WorkflowViewState.IdRef="ExcelApplicationScope_3" InstanceCachePeriod="3000" Visible="False" WorkbookPath="[Base]">
+                                          <ui:ExcelApplicationScope.Body>
+                                            <ActivityAction x:TypeArguments="ui:WorkbookApplication">
+                                              <ActivityAction.Argument>
+                                                <DelegateInArgument x:TypeArguments="ui:WorkbookApplication" Name="ExcelWorkbookScope" />
+                                              </ActivityAction.Argument>
+                                              <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="376,403" sap2010:WorkflowViewState.IdRef="Sequence_28">
+                                                <sap:WorkflowViewStateService.ViewState>
+                                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                  </scg:Dictionary>
+                                                </sap:WorkflowViewStateService.ViewState>
+                                                <Assign sap:VirtualizedContainerService.HintSize="334,60" sap2010:WorkflowViewState.IdRef="Assign_37">
+                                                  <Assign.To>
+                                                    <OutArgument x:TypeArguments="x:Double">[client_extrato]</OutArgument>
+                                                  </Assign.To>
+                                                  <Assign.Value>
+                                                    <InArgument x:TypeArguments="x:Double">[client_extrato_depois]</InArgument>
+                                                  </Assign.Value>
+                                                </Assign>
+                                                <ui:ExcelWriteCell Cell="[&quot;E&quot; + client_index.ToString]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="334,87" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_2" SheetName="Sheet1" Text="[client_extrato.ToString]" />
+                                                <ui:MessageBox Caption="{x:Null}" AutoCloseAfter="00:00:00" Buttons="YesNo" ChosenButton="[novo_procedimento]" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="334,84" sap2010:WorkflowViewState.IdRef="MessageBox_10" Text="[&quot;Feito! Conta paga com sucesso!&quot; + Environment.NewLine + &#xA;&quot;Deseja fazer outra operação?&quot;]" TopMost="True" />
+                                              </Sequence>
+                                            </ActivityAction>
+                                          </ui:ExcelApplicationScope.Body>
+                                        </ui:ExcelApplicationScope>
+                                      </Sequence>
+                                    </If.Else>
+                                  </If>
                                 </Sequence>
                               </If.Then>
                               <If.Else>
-                                <Sequence sap:VirtualizedContainerService.HintSize="376,176" sap2010:WorkflowViewState.IdRef="Sequence_30">
+                                <Sequence sap:VirtualizedContainerService.HintSize="242,143" sap2010:WorkflowViewState.IdRef="Sequence_30">
                                   <sap:WorkflowViewStateService.ViewState>
                                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
                                     </scg:Dictionary>
                                   </sap:WorkflowViewStateService.ViewState>
-                                  <ui:MessageBox Caption="{x:Null}" AutoCloseAfter="00:00:00" Buttons="YesNo" ChosenButton="[tentar_novamente]" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="334,84" sap2010:WorkflowViewState.IdRef="MessageBox_11" Text="[&quot;Valor incorreto, tentar novamente?&quot;]" TopMost="True" />
+                                  <ui:MessageBox Caption="{x:Null}" AutoCloseAfter="00:00:00" Buttons="YesNo" ChosenButton="[tentar_novamente]" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="MessageBox_11" Text="[&quot;Valor incorreto, tentar novamente?&quot;]" TopMost="True">
+                                    <sap:WorkflowViewStateService.ViewState>
+                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                      </scg:Dictionary>
+                                    </sap:WorkflowViewStateService.ViewState>
+                                  </ui:MessageBox>
                                 </Sequence>
                               </If.Else>
                             </If>
@@ -763,9 +828,7 @@
                             <Transition.To>
                               <x:Reference>__ReferenceID2</x:Reference>
                             </Transition.To>
-                            <Transition.Condition>
-                              <mva:VisualBasicValue x:TypeArguments="x:Boolean" ExpressionText="novo_procedimento = &quot;Yes&quot;" />
-                            </Transition.Condition>
+                            <Transition.Condition>[novo_procedimento = "Yes"]</Transition.Condition>
                           </Transition>
                           <Transition DisplayName="Finalizar" sap:VirtualizedContainerService.HintSize="450,505" sap2010:WorkflowViewState.IdRef="Transition_14">
                             <sap:WorkflowViewStateService.ViewState>
@@ -778,9 +841,7 @@
                             <Transition.To>
                               <x:Reference>__ReferenceID3</x:Reference>
                             </Transition.To>
-                            <Transition.Condition>
-                              <mva:VisualBasicValue x:TypeArguments="x:Boolean" ExpressionText="novo_procedimento = &quot;No&quot;" />
-                            </Transition.Condition>
+                            <Transition.Condition>[novo_procedimento = "No"]</Transition.Condition>
                           </Transition>
                         </State.Transitions>
                       </State>
@@ -794,11 +855,9 @@
                         <x:Int32 x:Key="DestConnectionPointIndex">38</x:Int32>
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
-                    <Transition.Condition>
-                      <mva:VisualBasicValue x:TypeArguments="x:Boolean" ExpressionText="tipo_operacao.ToString = &quot;Transferência&quot;" />
-                    </Transition.Condition>
+                    <Transition.Condition>[tipo_operacao.ToString = "Transferência"]</Transition.Condition>
                     <Transition.To>
-                      <State x:Name="__ReferenceID4" DisplayName="Transferencia" sap:VirtualizedContainerService.HintSize="526,981" sap2010:WorkflowViewState.IdRef="State_4">
+                      <State x:Name="__ReferenceID4" DisplayName="Transferencia" sap:VirtualizedContainerService.HintSize="134,61" sap2010:WorkflowViewState.IdRef="State_4">
                         <State.Entry>
                           <Sequence sap:VirtualizedContainerService.HintSize="480,567" sap2010:WorkflowViewState.IdRef="Sequence_34">
                             <sap:WorkflowViewStateService.ViewState>
@@ -1136,9 +1195,7 @@
                             <Transition.To>
                               <x:Reference>__ReferenceID2</x:Reference>
                             </Transition.To>
-                            <Transition.Condition>
-                              <mva:VisualBasicValue x:TypeArguments="x:Boolean" ExpressionText="novo_procedimento = &quot;Yes&quot;" />
-                            </Transition.Condition>
+                            <Transition.Condition>[novo_procedimento = "Yes"]</Transition.Condition>
                           </Transition>
                           <Transition DisplayName="Tentar Novamente" sap:VirtualizedContainerService.HintSize="450,505" sap2010:WorkflowViewState.IdRef="Transition_17">
                             <sap:WorkflowViewStateService.ViewState>
@@ -1151,9 +1208,7 @@
                             <Transition.To>
                               <x:Reference>__ReferenceID4</x:Reference>
                             </Transition.To>
-                            <Transition.Condition>
-                              <mva:VisualBasicValue x:TypeArguments="x:Boolean" ExpressionText="tentar_novamente.Contains(&quot;Yes&quot;)" />
-                            </Transition.Condition>
+                            <Transition.Condition>[tentar_novamente.Contains("Yes")]</Transition.Condition>
                           </Transition>
                           <Transition DisplayName="Finalizar" sap:VirtualizedContainerService.HintSize="495,505" sap2010:WorkflowViewState.IdRef="Transition_19">
                             <sap:WorkflowViewStateService.ViewState>
@@ -1166,9 +1221,7 @@
                             <Transition.To>
                               <x:Reference>__ReferenceID3</x:Reference>
                             </Transition.To>
-                            <Transition.Condition>
-                              <mva:VisualBasicValue x:TypeArguments="x:Boolean" ExpressionText="novo_procedimento.ToString = &quot;No&quot; or tentar_novamente.ToString = &quot;No&quot;" />
-                            </Transition.Condition>
+                            <Transition.Condition>[novo_procedimento.ToString = "No" or tentar_novamente.ToString = "No"]</Transition.Condition>
                           </Transition>
                         </State.Transitions>
                         <State.Variables>
@@ -1205,6 +1258,7 @@
         <State.Variables>
           <Variable x:TypeArguments="x:String" Name="conta_senha" />
           <Variable x:TypeArguments="x:Double" Name="retorno_conta" />
+          <Variable x:TypeArguments="x:Boolean" Name="pedir_senha" />
         </State.Variables>
       </State>
       <x:Reference>__ReferenceID3</x:Reference>
